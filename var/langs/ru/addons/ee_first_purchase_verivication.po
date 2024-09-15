@@ -1,0 +1,29 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU"
+
+msgctxt "Addons::name::ee_first_purchase_verivication"
+msgid "ee_first_purchase_verivication_name"
+msgstr "[efimchenko.com] Первая покупка пользователя"
+
+msgctxt "Addons::description::ee_first_purchase_verivication"
+msgid "ee_first_purchase_verivication_description"
+msgstr "Добавляет в промоушены условие 'Первая покупка пользователя' Условие будет выполнено когда пользователь совершит свою первую покупку."
+
+msgctxt "SettingsSections::ee_first_purchase_verivication::general"
+msgid "ee_first_purchase_verivication_general"
+msgstr "Общее"
+
+msgctxt "SettingsOptions::ee_first_purchase_verivication::ee_first_purchase_verivication_active"
+msgid "ee_first_purchase_verivication_active"
+msgstr "Активировать"
+
+msgctxt "SettingsTooltips::ee_first_purchase_verivication::ee_first_purchase_verivication_active"
+msgid "ee_first_purchase_verivication_active_tooltips"
+msgstr "Подсказка"
+
+msgctxt "Languages::promotion_cond_ee_first_pay"
+msgid "ee_first_pay"
+msgstr "Первая покупка пользователя"

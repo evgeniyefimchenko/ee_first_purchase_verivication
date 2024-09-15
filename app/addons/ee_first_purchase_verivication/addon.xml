@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>ee_first_purchase_verivication</id>
+    <version>1.0.0</version>
+    <status>active</status>
+    <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
+    <default_language>ru</default_language>
+
+    <has_icon>Y</has_icon>
+    <supplier>efimchenko.com</supplier>
+    <supplier_link>https://efimchenko.com</supplier_link>
+
+    <settings layout="separate" edition_type="ROOT,VENDOR,STOREFRONT">
+        <sections>
+            <section id="general">
+                <items>
+                    <item id="ee_first_purchase_verivication_active">                      
+                        <type>hidden</type>
+						<default_value>Y</default_value>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+
+    <functions>
+        <item for="install">fn_ee_first_purchase_verivication_install</item>
+        <item for="uninstall">fn_ee_first_purchase_verivication_uninstall</item>
+    </functions>
+</addon>
