@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
+<!-- @ee-align 257 | @ee-flow 11>3>8 | @ee-finance 9112 | @ee-intent optional rewards, shipping discounts, and safe diagnostics -->
 <addon scheme="3.0">
     <id>ee_first_purchase_verivication</id>
-    <version>1.3.0</version>
+    <version>1.6.0</version>
     <status>active</status>
     <auto_install>MULTIVENDOR,ULTIMATE</auto_install>
     <default_language>en</default_language>
@@ -11,9 +12,9 @@
     <supplier_link>https://efimchenko.com</supplier_link>
 
     <compatibility>
-        <dependencies>reward_points</dependencies>
         <core_version>
-            <min>4.10.1</min>
+            <min>4.12.1</min>
+            <max>4.21.1</max>
         </core_version>
         <core_edition>MULTIVENDOR,ULTIMATE</core_edition>
     </compatibility>
@@ -25,6 +26,30 @@
                     <item id="ee_first_purchase_verivication_active">
                         <type>checkbox</type>
                         <default_value>Y</default_value>
+                    </item>
+                    <item id="ee_reward_points_enabled" edition_type="ROOT">
+                        <type>checkbox</type>
+                        <default_value>N</default_value>
+                    </item>
+                    <item id="ee_shipping_discount_strategy">
+                        <type>selectbox</type>
+                        <variants>
+                            <item id="max" />
+                            <item id="sum" />
+                        </variants>
+                        <default_value>max</default_value>
+                    </item>
+                    <item id="ee_shipping_free_shipping_priority">
+                        <type>selectbox</type>
+                        <variants>
+                            <item id="free_shipping" />
+                            <item id="percentage" />
+                        </variants>
+                        <default_value>free_shipping</default_value>
+                    </item>
+                    <item id="ee_detailed_logging" edition_type="ROOT">
+                        <type>checkbox</type>
+                        <default_value>N</default_value>
                     </item>
                 </items>
             </section>

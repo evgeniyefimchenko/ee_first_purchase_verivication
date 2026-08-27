@@ -1,3 +1,4 @@
+#. @ee-align 257 | @ee-flow 11>3>8 | @ee-finance 9112 | @ee-intent clear promotion, shipping, and diagnostics guidance
 msgid ""
 msgstr ""
 "Project-Id-Version: tygh\n"
@@ -11,7 +12,7 @@ msgstr "[efimchenko.com] Promotion extensions"
 
 msgctxt "Addons::description::ee_first_purchase_verivication"
 msgid "Adds a cart promotion condition that is fulfilled only when a registered customer has no previous orders."
-msgstr "Adds the first purchase condition and a promotion bonus that sets a target reward points percentage for matching products."
+msgstr "Adds the first purchase condition, an optional reward points bonus, and a percentage shipping discount bonus."
 
 msgctxt "SettingsSections::ee_first_purchase_verivication::general"
 msgid "General"
@@ -30,8 +31,56 @@ msgid "Enable promotion condition"
 msgstr "Enable promotion extensions"
 
 msgctxt "SettingsTooltips::ee_first_purchase_verivication::ee_first_purchase_verivication_active"
-msgid "When disabled, the condition remains available in promotions, but it is never fulfilled."
-msgstr "When disabled, the condition and bonus remain available in promotions, but they are never applied."
+msgid "When disabled, the condition and bonus remain available in promotions, but they are never applied."
+msgstr "When disabled, the conditions and bonuses remain available in promotions, but they are never applied."
+
+msgctxt "SettingsOptions::ee_first_purchase_verivication::ee_reward_points_enabled"
+msgid "Use reward points promotion bonus"
+msgstr "Use reward points promotion bonus"
+
+msgctxt "SettingsTooltips::ee_first_purchase_verivication::ee_reward_points_enabled"
+msgid "When disabled, the bonus remains available in cart promotions but is not applied. The option requires the standard Reward points add-on to be installed and active."
+msgstr "When disabled, the bonus remains available in cart promotions but is not applied. The option requires the standard Reward points add-on to be installed and active."
+
+msgctxt "SettingsOptions::ee_first_purchase_verivication::ee_shipping_discount_strategy"
+msgid "Multiple discounts for one shipping method"
+msgstr "Multiple discounts for one shipping method"
+
+msgctxt "SettingsTooltips::ee_first_purchase_verivication::ee_shipping_discount_strategy"
+msgid "Used only for promotions that remain applicable after CS-Cart processes Priority and Stop other rules."
+msgstr "Used only for promotions that remain applicable after CS-Cart processes Priority and Stop other rules."
+
+msgctxt "SettingsVariants::ee_first_purchase_verivication::ee_shipping_discount_strategy::max"
+msgid "Use the highest discount"
+msgstr "Use the highest discount"
+
+msgctxt "SettingsVariants::ee_first_purchase_verivication::ee_shipping_discount_strategy::sum"
+msgid "Add discounts, up to 100%"
+msgstr "Add discounts, up to 100%"
+
+msgctxt "SettingsOptions::ee_first_purchase_verivication::ee_shipping_free_shipping_priority"
+msgid "Free shipping and percentage discount"
+msgstr "Free shipping and percentage discount"
+
+msgctxt "SettingsTooltips::ee_first_purchase_verivication::ee_shipping_free_shipping_priority"
+msgid "Used only when both bonuses remain applicable after CS-Cart processes Priority and Stop other rules."
+msgstr "Used only when both bonuses remain applicable after CS-Cart processes Priority and Stop other rules."
+
+msgctxt "SettingsVariants::ee_first_purchase_verivication::ee_shipping_free_shipping_priority::free_shipping"
+msgid "Free shipping takes priority"
+msgstr "Free shipping takes priority"
+
+msgctxt "SettingsVariants::ee_first_purchase_verivication::ee_shipping_free_shipping_priority::percentage"
+msgid "Percentage discount takes priority"
+msgstr "Percentage discount takes priority"
+
+msgctxt "SettingsOptions::ee_first_purchase_verivication::ee_detailed_logging"
+msgid "Detailed diagnostic logging"
+msgstr "Detailed diagnostic logging"
+
+msgctxt "SettingsTooltips::ee_first_purchase_verivication::ee_detailed_logging"
+msgid "Errors and warnings are always logged. Enable this option temporarily to also record discount calculation and order shipping persistence steps."
+msgstr "Errors and warnings are always logged. Enable this option temporarily to also record discount calculation and order shipping persistence steps."
 
 msgctxt "Languages::promotion_cond_ee_first_pay"
 msgid "Customer's first purchase"
@@ -41,15 +90,44 @@ msgctxt "Languages::promotion_bonus_ee_reward_points_percent"
 msgid "Reward points: target percent of matching products"
 msgstr "Reward points: target percent of matching products"
 
+msgctxt "Languages::promotion_bonus_ee_shipping_discount_percent"
+msgid "Shipping discount, %"
+msgstr "Shipping discount, %"
+
+msgctxt "Languages::ee_first_purchase_verivication_reward_points_reason_not_installed"
+msgid "the standard Reward points add-on is not installed"
+msgstr "the standard Reward points add-on is not installed"
+
+msgctxt "Languages::ee_first_purchase_verivication_reward_points_reason_disabled"
+msgid "the standard Reward points add-on is installed but disabled"
+msgstr "the standard Reward points add-on is installed but disabled"
+
+msgctxt "Languages::ee_first_purchase_verivication_reward_points_reason_files_missing"
+msgid "the standard Reward points add-on files are missing or damaged"
+msgstr "the standard Reward points add-on files are missing or damaged"
+
+msgctxt "Languages::ee_first_purchase_verivication_reward_points_cannot_enable"
+msgid "Reward points accrual was not enabled because [reason]. Install or enable Reward points, then enable this option again."
+msgstr "Reward points accrual was not enabled because [reason]. Install or enable Reward points, then enable this option again."
+
+msgctxt "Languages::ee_first_purchase_verivication_reward_points_unavailable"
+msgid "Reward points accrual is enabled in Promotion extensions, but [reason]. Accrual is safely suspended. Restore Reward points or disable the reward points option in Promotion extensions."
+msgstr "Reward points accrual is enabled in Promotion extensions, but [reason]. Accrual is safely suspended. Restore Reward points or disable the reward points option in Promotion extensions."
+
+msgctxt "Languages::ee_first_purchase_verivication_log_storage_unavailable"
+msgid "Promotion extensions cannot write diagnostic logs ([reason]). Check write permissions for: [path]"
+msgstr "Promotion extensions cannot write diagnostic logs ([reason]). Check write permissions for: [path]"
+
 msgctxt "Languages::ee_first_purchase_verivication_instructions"
 msgid "<p>This add-on adds the <strong>Customer's first purchase</strong> condition to cart promotions.</p><ol><li>Open <strong>Marketing -> Promotions</strong> and create or edit a cart promotion.</li><li>Add a condition and choose <strong>Customer's first purchase</strong>.</li><li>The condition is fulfilled only for signed-in customers without previous orders. Incomplete orders are ignored.</li><li>In CS-Cart Ultimate the check is performed inside the current storefront. In Multi-Vendor the check is performed across the marketplace.</li></ol>"
 msgstr ""
 "<h4>Add-on purpose</h4>"
-"<p>The add-on extends CS-Cart promotions and requires the <strong>Reward points</strong> add-on. It provides two independent features: a <strong>first purchase bonus</strong> through a promotion condition and <strong>increased reward points for campaigns</strong> through a separate cart promotion bonus.</p>"
+"<p>The add-on extends CS-Cart promotions. The first purchase condition works independently. Integration with the standard <strong>Reward points</strong> add-on is optional and controlled by a separate setting.</p>"
 "<h4>1. First purchase bonus</h4>"
 "<p>For this feature, the add-on adds the <strong>Customer's first purchase</strong> promotion condition. The condition is available in catalog and cart promotions. The condition itself does not grant points or discounts; it only checks that the signed-in customer has no previous orders. Incomplete orders are ignored.</p>"
 "<p>How to use it: create a catalog or cart promotion, add the <strong>Customer's first purchase</strong> condition, then add a standard promotion bonus: product discount, order discount, free shipping, coupon, or another bonus available for the selected promotion type. In CS-Cart Ultimate the check is limited to the current storefront. In Multi-Vendor the customer's order history is checked across the marketplace.</p>"
 "<h4>2. Reward points for campaigns</h4>"
+"<p>First enable <strong>Use reward points promotion bonus</strong> in the add-on settings. The option can be enabled only when the standard <strong>Reward points</strong> add-on is installed and active. When the option is off, the bonus remains visible in existing and new promotions but is not applied. If Reward points is later disabled or removed, accrual stops without breaking the storefront and an administrator warning is shown.</p>"
 "<p>For this feature, the add-on adds the <strong>Reward points: target percent of matching products</strong> cart promotion bonus. This bonus is available only in cart promotions because Reward points calculates and stores points at cart and order level. It is intentionally not shown in catalog promotions.</p>"
 "<p>The bonus sets the final reward points percentage for products that match product-scoped promotion conditions. The value is a target percentage, not an extra percentage added on top. If Reward points globally grants 1% and a campaign must grant 5%, enter <strong>5</strong>; matching products will grant 5%.</p>"
 "<p>The add-on does not grant points directly. It changes cart reward calculation, then the standard Reward points add-on stores the calculated points in the order. Points are actually credited when the order is moved to a status where reward points granting is enabled, for example <strong>Completed</strong>.</p>"
@@ -57,5 +135,12 @@ msgstr ""
 "<p>The add-on uses only product-scoped promotion conditions to select individual products: <strong>Products</strong>, <strong>Categories</strong>, and <strong>Feature</strong>. For a brand campaign, add the <strong>Feature</strong> condition, select the <strong>Brand</strong> feature, and choose the required brand variants.</p>"
 "<p>Other conditions, such as first purchase, user group, coupon, order subtotal, country, or shipping method, control whether the whole promotion applies, but they do not select individual products for percentage calculation.</p>"
 "<p>If a cart promotion has no <strong>Products</strong>, <strong>Categories</strong>, or <strong>Feature</strong> conditions, the percent bonus applies to all cart products. If several percent bonuses match the same product, the highest target percentage is used.</p>"
+"<h4>3. Percentage shipping discount</h4>"
+"<p>Create a <strong>cart promotion</strong> and add the <strong>Shipping discount, %</strong> bonus. Select the shipping method and enter a percentage from <strong>1</strong> to <strong>100</strong>. The discount applies only to the selected method. For example, a 50% bonus changes a calculated shipping rate of 600 to 300.</p>"
+"<p>If several applicable promotions discount the same shipping method, use <strong>Multiple discounts for one shipping method</strong> to select the highest percentage or add percentages up to 100%. Use <strong>Free shipping and percentage discount</strong> to decide which bonus wins when both remain applicable.</p>"
+"<p>CS-Cart processes promotion <strong>Priority</strong> and <strong>Stop other rules</strong> first. The add-on conflict settings only combine bonuses that remain applicable after that standard processing. Shipping is recalculated from its original rate, so repeated AJAX updates do not accumulate the discount.</p>"
+"<h4>Diagnostics</h4>"
+"<p>Warnings and errors are always written to <strong>app/addons/ee_first_purchase_verivication/logs/ee_first_purchase_verivication.jsonl</strong>. Each line is a separate JSON record suitable for automated analysis. Customer contact details, credentials, tokens, cookies, and payment data are removed.</p>"
+"<p>Enable <strong>Detailed diagnostic logging</strong> temporarily to record accepted promotion bonuses, conflict resolution, original and final shipping rates, and the amount passed to an order. Disable it after reproducing the problem. The active file rotates at 5 MiB; five archives are retained. The administrator panel displays a warning if the directory is not writable.</p>"
 "<h4>Examples</h4>"
-"<ol><li><strong>First purchase bonus:</strong> create a promotion, add the <strong>Customer's first purchase</strong> condition, and add the required standard bonus, for example product discount or order discount.</li><li><strong>1% for all purchases:</strong> configure the global rule in Reward points; no promotion is required.</li><li><strong>5% by category:</strong> create a cart promotion, add the <strong>Categories</strong> condition, select the category, and add the <strong>Reward points: target percent of matching products</strong> bonus with value <strong>5</strong>.</li><li><strong>5% by brand:</strong> create a cart promotion, add the <strong>Feature</strong> condition, select <strong>Brand</strong> and brand variants, and add the bonus with value <strong>5</strong>.</li></ol>"
+"<ol><li><strong>First purchase bonus:</strong> create a promotion, add the <strong>Customer's first purchase</strong> condition, and add the required standard bonus, for example product discount or order discount.</li><li><strong>1% for all purchases:</strong> configure the global rule in Reward points; no promotion is required.</li><li><strong>5% by category:</strong> create a cart promotion, add the <strong>Categories</strong> condition, select the category, and add the <strong>Reward points: target percent of matching products</strong> bonus with value <strong>5</strong>.</li><li><strong>5% by brand:</strong> create a cart promotion, add the <strong>Feature</strong> condition, select <strong>Brand</strong> and brand variants, and add the bonus with value <strong>5</strong>.</li><li><strong>50% shipping discount:</strong> create a cart promotion, add <strong>Shipping discount, %</strong>, select the shipping method, and enter <strong>50</strong>.</li></ol>"

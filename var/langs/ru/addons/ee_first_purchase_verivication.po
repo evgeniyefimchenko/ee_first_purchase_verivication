@@ -1,3 +1,4 @@
+#. @ee-align 257 | @ee-flow 11>3>8 | @ee-finance 9112 | @ee-intent clear promotion, shipping, and diagnostics guidance
 msgid ""
 msgstr ""
 "Project-Id-Version: tygh\n"
@@ -11,7 +12,7 @@ msgstr "[efimchenko.com] Расширения промоакций"
 
 msgctxt "Addons::description::ee_first_purchase_verivication"
 msgid "Adds a cart promotion condition that is fulfilled only when a registered customer has no previous orders."
-msgstr "Добавляет условие первой покупки и бонус промоакции для начисления целевого процента бонусных баллов по подходящим товарам."
+msgstr "Добавляет условие первой покупки, опциональный бонус баллов и процентную скидку на выбранный способ доставки."
 
 msgctxt "SettingsSections::ee_first_purchase_verivication::general"
 msgid "General"
@@ -30,8 +31,56 @@ msgid "Enable promotion condition"
 msgstr "Включить расширения промоакций"
 
 msgctxt "SettingsTooltips::ee_first_purchase_verivication::ee_first_purchase_verivication_active"
-msgid "When disabled, the condition remains available in promotions, but it is never fulfilled."
-msgstr "Если настройка выключена, условие и бонус остаются в списке промоакций, но не применяются."
+msgid "When disabled, the condition and bonus remain available in promotions, but they are never applied."
+msgstr "Если настройка выключена, условия и бонусы остаются в списке промоакций, но не применяются."
+
+msgctxt "SettingsOptions::ee_first_purchase_verivication::ee_reward_points_enabled"
+msgid "Use reward points promotion bonus"
+msgstr "Использовать начисление бонусных баллов"
+
+msgctxt "SettingsTooltips::ee_first_purchase_verivication::ee_reward_points_enabled"
+msgid "When disabled, the bonus remains available in cart promotions but is not applied. The option requires the standard Reward points add-on to be installed and active."
+msgstr "Если настройка выключена, бонус остается в промоакциях корзины, но не применяется. Для включения требуется установленный и активный штатный модуль «Бонусные баллы»."
+
+msgctxt "SettingsOptions::ee_first_purchase_verivication::ee_shipping_discount_strategy"
+msgid "Multiple discounts for one shipping method"
+msgstr "Несколько скидок на один способ доставки"
+
+msgctxt "SettingsTooltips::ee_first_purchase_verivication::ee_shipping_discount_strategy"
+msgid "Used only for promotions that remain applicable after CS-Cart processes Priority and Stop other rules."
+msgstr "Применяется только к акциям, которые остались активны после обработки штатных «Приоритет» и «Остановить другие правила»."
+
+msgctxt "SettingsVariants::ee_first_purchase_verivication::ee_shipping_discount_strategy::max"
+msgid "Use the highest discount"
+msgstr "Использовать максимальную скидку"
+
+msgctxt "SettingsVariants::ee_first_purchase_verivication::ee_shipping_discount_strategy::sum"
+msgid "Add discounts, up to 100%"
+msgstr "Суммировать скидки, но не более 100%"
+
+msgctxt "SettingsOptions::ee_first_purchase_verivication::ee_shipping_free_shipping_priority"
+msgid "Free shipping and percentage discount"
+msgstr "Бесплатная доставка и процентная скидка"
+
+msgctxt "SettingsTooltips::ee_first_purchase_verivication::ee_shipping_free_shipping_priority"
+msgid "Used only when both bonuses remain applicable after CS-Cart processes Priority and Stop other rules."
+msgstr "Применяется только когда оба бонуса остались активны после обработки штатных «Приоритет» и «Остановить другие правила»."
+
+msgctxt "SettingsVariants::ee_first_purchase_verivication::ee_shipping_free_shipping_priority::free_shipping"
+msgid "Free shipping takes priority"
+msgstr "Бесплатная доставка имеет приоритет"
+
+msgctxt "SettingsVariants::ee_first_purchase_verivication::ee_shipping_free_shipping_priority::percentage"
+msgid "Percentage discount takes priority"
+msgstr "Процентная скидка имеет приоритет"
+
+msgctxt "SettingsOptions::ee_first_purchase_verivication::ee_detailed_logging"
+msgid "Detailed diagnostic logging"
+msgstr "Подробное диагностическое логирование"
+
+msgctxt "SettingsTooltips::ee_first_purchase_verivication::ee_detailed_logging"
+msgid "Errors and warnings are always logged. Enable this option temporarily to also record discount calculation and order shipping persistence steps."
+msgstr "Ошибки и предупреждения записываются всегда. Включите настройку временно, чтобы также записывать этапы расчета скидок и сохранения доставки в заказе."
 
 msgctxt "Languages::promotion_cond_ee_first_pay"
 msgid "Customer's first purchase"
@@ -41,15 +90,44 @@ msgctxt "Languages::promotion_bonus_ee_reward_points_percent"
 msgid "Reward points: target percent of matching products"
 msgstr "Бонусные баллы: целевой процент от подходящих товаров"
 
+msgctxt "Languages::promotion_bonus_ee_shipping_discount_percent"
+msgid "Shipping discount, %"
+msgstr "Скидка на доставку, %"
+
+msgctxt "Languages::ee_first_purchase_verivication_reward_points_reason_not_installed"
+msgid "the standard Reward points add-on is not installed"
+msgstr "штатный модуль «Бонусные баллы» не установлен"
+
+msgctxt "Languages::ee_first_purchase_verivication_reward_points_reason_disabled"
+msgid "the standard Reward points add-on is installed but disabled"
+msgstr "штатный модуль «Бонусные баллы» установлен, но выключен"
+
+msgctxt "Languages::ee_first_purchase_verivication_reward_points_reason_files_missing"
+msgid "the standard Reward points add-on files are missing or damaged"
+msgstr "файлы штатного модуля «Бонусные баллы» отсутствуют или повреждены"
+
+msgctxt "Languages::ee_first_purchase_verivication_reward_points_cannot_enable"
+msgid "Reward points accrual was not enabled because [reason]. Install or enable Reward points, then enable this option again."
+msgstr "Начисление бонусных баллов не включено: [reason]. Установите или включите модуль «Бонусные баллы», затем повторно включите эту настройку."
+
+msgctxt "Languages::ee_first_purchase_verivication_reward_points_unavailable"
+msgid "Reward points accrual is enabled in Promotion extensions, but [reason]. Accrual is safely suspended. Restore Reward points or disable the reward points option in Promotion extensions."
+msgstr "В модуле «Расширения промоакций» включено начисление бонусных баллов, но [reason]. Начисление безопасно приостановлено. Восстановите модуль «Бонусные баллы» или выключите опцию начисления в настройках «Расширений промоакций»."
+
+msgctxt "Languages::ee_first_purchase_verivication_log_storage_unavailable"
+msgid "Promotion extensions cannot write diagnostic logs ([reason]). Check write permissions for: [path]"
+msgstr "Модуль «Расширения промоакций» не может записывать диагностические логи ([reason]). Проверьте права на запись для каталога: [path]"
+
 msgctxt "Languages::ee_first_purchase_verivication_instructions"
 msgid "<p>This add-on adds the <strong>Customer's first purchase</strong> condition to cart promotions.</p><ol><li>Open <strong>Marketing -> Promotions</strong> and create or edit a cart promotion.</li><li>Add a condition and choose <strong>Customer's first purchase</strong>.</li><li>The condition is fulfilled only for signed-in customers without previous orders. Incomplete orders are ignored.</li><li>In CS-Cart Ultimate the check is performed inside the current storefront. In Multi-Vendor the check is performed across the marketplace.</li></ol>"
 msgstr ""
 "<h4>Назначение модуля</h4>"
-"<p>Модуль расширяет промоакции CS-Cart и требует включенный модуль <strong>Reward points</strong>. В модуле две независимые функции: <strong>бонус при первой покупке</strong> через условие промоакции и <strong>начисление повышенного процента баллов при акциях</strong> через отдельный бонус промоакции корзины.</p>"
+"<p>Модуль расширяет промоакции CS-Cart. Условие первой покупки работает самостоятельно. Интеграция со штатным модулем <strong>Бонусные баллы</strong> является необязательной и включается отдельной настройкой.</p>"
 "<h4>1. Бонус при первой покупке</h4>"
 "<p>Для этой функции модуль добавляет условие промоакции <strong>Первая покупка пользователя</strong>. Условие доступно в промоакциях каталога и корзины. Само условие ничего не начисляет и не дает скидку; оно только проверяет, что авторизованный покупатель еще не делал заказов. Незавершенные заказы не учитываются.</p>"
 "<p>Как использовать: создайте промоакцию каталога или корзины, добавьте условие <strong>Первая покупка пользователя</strong>, затем добавьте штатный бонус промоакции: скидку, бесплатную доставку, купон или другой доступный бонус выбранного типа промоакции. В CS-Cart Ultimate проверка ограничивается текущей витриной, в Multi-Vendor проверяется история заказов по всему маркетплейсу.</p>"
 "<h4>2. Начисление баллов при акциях</h4>"
+"<p>Сначала включите <strong>Использовать начисление бонусных баллов</strong> в настройках модуля. Опция включится только при установленном и активном штатном модуле <strong>Бонусные баллы</strong>. При выключенной опции бонус остается видимым в существующих и новых промоакциях, но не применяется. Если Reward Points позднее выключить или удалить, начисление остановится без ошибки сайта, а администратор увидит предупреждение.</p>"
 "<p>Для этой функции модуль добавляет бонус промоакции корзины <strong>Бонусные баллы: целевой процент от подходящих товаров</strong>. Этот бонус доступен только в промоакциях корзины, потому что Reward points рассчитывает и сохраняет баллы на уровне корзины и заказа. В промоакциях каталога он намеренно не отображается.</p>"
 "<p>Бонус задает итоговый процент начисления баллов для товаров, которые подходят под товарные условия промоакции. Значение является целевым процентом, а не добавкой сверху. Если глобально Reward points начисляет 1%, а для акции нужен 5%, в бонусе нужно указать <strong>5</strong>, итог по подходящим товарам будет 5%.</p>"
 "<p>Модуль не начисляет баллы напрямую. Он меняет расчет баллов в корзине, затем штатный Reward points сохраняет рассчитанные баллы в заказ. Фактическое зачисление происходит при переводе заказа в статус, у которого включен параметр начисления бонусных баллов, например <strong>Выполнен</strong>.</p>"
@@ -57,5 +135,12 @@ msgstr ""
 "<p>Для отбора отдельных товаров модуль использует только товарные условия промоакции: <strong>Товары</strong>, <strong>Категории</strong>, <strong>Характеристика</strong>. Для акции по бренду добавьте условие <strong>Характеристика</strong>, выберите характеристику <strong>Бренд</strong> и нужные варианты бренда.</p>"
 "<p>Остальные условия, например первая покупка, пользовательская группа, купон, сумма заказа, страна или способ доставки, определяют применимость промоакции целиком, но не выбирают отдельные товары для расчета процента.</p>"
 "<p>Если в промоакции корзины нет условий <strong>Товары</strong>, <strong>Категории</strong> или <strong>Характеристика</strong>, процентный бонус применяется ко всем товарам корзины. Если один товар подходит под несколько процентных бонусов, используется самый высокий целевой процент.</p>"
+"<h4>3. Процентная скидка на доставку</h4>"
+"<p>Создайте <strong>промоакцию корзины</strong> и добавьте бонус <strong>Скидка на доставку, %</strong>. Выберите способ доставки и укажите процент от <strong>1</strong> до <strong>100</strong>. Скидка действует только на выбранный способ. Например, при стоимости доставки 600 и бонусе 50% покупатель заплатит 300.</p>"
+"<p>Если один способ доставки участвует в нескольких подходящих акциях, настройка <strong>Несколько скидок на один способ доставки</strong> позволяет использовать максимальный процент или сложить проценты с ограничением 100%. Настройка <strong>Бесплатная доставка и процентная скидка</strong> определяет, какой бонус имеет приоритет, когда применимы оба.</p>"
+"<p>Сначала CS-Cart обрабатывает штатные поля <strong>Приоритет</strong> и <strong>Остановить другие правила</strong>. Настройки конфликтов модуля работают только с бонусами, оставшимися после этой обработки. При каждом AJAX-пересчете скидка заново считается от исходной стоимости доставки и не накапливается.</p>"
+"<h4>Диагностика</h4>"
+"<p>Предупреждения и ошибки всегда записываются в <strong>app/addons/ee_first_purchase_verivication/logs/ee_first_purchase_verivication.jsonl</strong>. Каждая строка является отдельной JSON-записью, пригодной для автоматического анализа. Контактные данные покупателей, пароли, токены, cookies и платежные данные удаляются.</p>"
+"<p>Временно включите <strong>Подробное диагностическое логирование</strong>, чтобы записывать принятые бонусы, разрешение конфликтов, исходные и итоговые тарифы и сумму, переданную в заказ. После воспроизведения проблемы выключите настройку. Активный файл ротируется при размере 5 МиБ, хранится пять архивов. Если каталог недоступен для записи, администратор увидит предупреждение.</p>"
 "<h4>Примеры</h4>"
-"<ol><li><strong>Бонус при первой покупке:</strong> создайте промоакцию, добавьте условие <strong>Первая покупка пользователя</strong> и нужный штатный бонус, например скидку на товар или скидку на заказ.</li><li><strong>1% за все покупки:</strong> настройте глобальное начисление в Reward points, промоакция не нужна.</li><li><strong>5% по категории:</strong> создайте промоакцию корзины, добавьте условие <strong>Категории</strong>, выберите категорию, добавьте бонус <strong>Бонусные баллы: целевой процент от подходящих товаров</strong> со значением <strong>5</strong>.</li><li><strong>5% по бренду:</strong> создайте промоакцию корзины, добавьте условие <strong>Характеристика</strong>, выберите <strong>Бренд</strong> и варианты брендов, добавьте бонус со значением <strong>5</strong>.</li></ol>"
+"<ol><li><strong>Бонус при первой покупке:</strong> создайте промоакцию, добавьте условие <strong>Первая покупка пользователя</strong> и нужный штатный бонус, например скидку на товар или скидку на заказ.</li><li><strong>1% за все покупки:</strong> настройте глобальное начисление в Reward points, промоакция не нужна.</li><li><strong>5% по категории:</strong> создайте промоакцию корзины, добавьте условие <strong>Категории</strong>, выберите категорию, добавьте бонус <strong>Бонусные баллы: целевой процент от подходящих товаров</strong> со значением <strong>5</strong>.</li><li><strong>5% по бренду:</strong> создайте промоакцию корзины, добавьте условие <strong>Характеристика</strong>, выберите <strong>Бренд</strong> и варианты брендов, добавьте бонус со значением <strong>5</strong>.</li><li><strong>Скидка 50% на доставку:</strong> создайте промоакцию корзины, добавьте <strong>Скидка на доставку, %</strong>, выберите способ доставки и укажите <strong>50</strong>.</li></ol>"
