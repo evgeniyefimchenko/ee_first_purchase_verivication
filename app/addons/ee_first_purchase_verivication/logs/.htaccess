@@ -1,0 +1,7 @@
+# @ee-align 257 | @ee-flow 11>3>8 | @ee-finance 9112 | @ee-intent deny web access to diagnostic evidence
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Deny from all
+</IfModule>
